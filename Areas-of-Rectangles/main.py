@@ -5,6 +5,13 @@
 # COSC 2409 DNT
 #
 # Local variables
+lengthA = 0
+widthA = 0
+lengthB = 0
+widthB = 0
+areaA = 0
+areaB = 0
+
 
 # Get length A
 lengthA = int(input('Enter the length of rectangle A: '))
