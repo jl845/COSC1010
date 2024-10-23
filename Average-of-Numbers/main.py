@@ -7,25 +7,25 @@
 # Use comments liberally throughout the program. 
 
 def main():
-    # Declare local variables
-    contents = ''
-
     # Open numbers.txt file for reading
-    infile = open('numbers.txt', 'r')
+    numbers_file = open('numbers.txt', 'r')
 
-    # Read numbers in the file
-    num1 = int(infile.readline())
-    num2 = int(infile.readline())
-    num3 = int(infile.readline())
+     # Read the first line from the file
+    line = numbers_file.readline()
+    
+    # Constants
+    total = 0
+    numberOfLines = 0
+    
+    # As long as an empty string is not returned from readline, continue processing
+    while line != '':
+        numberOfLines += 1              # the number of lines
+        total += int(line)              # total of the numbers
+        line = numbers_file.readline()  # Read the next line
+    average = total / numberOfLines     # Average of the numbers
 
     # Close the file
-    infile.close()
-
-    # Add the three numbers
-    total = num1 + num2 + num3
-
-    # Find the average of the three numbers
-    average = total / 3
+    numbers_file.close()       
 
     # Display the average
     print(f'The average of the numbers on the file numbers.txt is: {average}')
