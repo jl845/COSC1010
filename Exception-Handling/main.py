@@ -19,7 +19,7 @@ def main():
         numberOfLines = 0
     
         # As long as an empty string is not returned from readline, continue processing
-        while line != '':
+        for line in numbers_file:
             numberOfLines += 1              # the number of lines
             total += int(line)              # total of the numbers
             line = numbers_file.readline()  # Read the next line
