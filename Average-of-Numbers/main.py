@@ -17,11 +17,11 @@ def main():
     total = 0
     numberOfLines = 0
     
-    # As long as an empty string is not returned from readline, continue processing
-    while line != '':
-        numberOfLines += 1              # the number of lines
-        total += int(line)              # total of the numbers
-        line = numbers_file.readline()  # Read the next line
+    # Read all lines in the file, find the total, and find the average
+    for line in numbers_file:
+         total += int(line)              # total of the numbers
+         numberOfLines += 1              # the number of lines
+         line = numbers_file.readline()  # Read the next line 
     average = total / numberOfLines     # Average of the numbers
 
     # Close the file
