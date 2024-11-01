@@ -7,21 +7,22 @@
 # Use comments liberally throughout the program. 
 
 def main():
+     # Local variables
+    total = 0
+    numberOfLines = 0
+
     # Open numbers.txt file for reading
     numbers_file = open('numbers.txt', 'r')
 
-     # Read the first line from the file
-    line = numbers_file.readline()
-    
-    # Constants
-    total = 0
-    numberOfLines = 0
+    # Read the first line from the file
+    line = numbers_file.readlines()
     
     # Read all lines in the file, find the total, and find the average
-    for line in numbers_file:
-         total += int(line)              # total of the numbers
+    for line in line:
+         number = int(line)
+         total += number              # total of the numbers
          numberOfLines += 1              # the number of lines
-         line = numbers_file.readline()  # Read the next line 
+         
     average = total / numberOfLines     # Average of the numbers
 
     # Close the file
