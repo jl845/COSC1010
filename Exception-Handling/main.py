@@ -10,19 +10,19 @@ def main():
     try:    
         # Open numbers.txt file for reading
         numbers_file = open('numbers.txt', 'r')
-   
-        # Read the first line from the file
-        line = numbers_file.readline()
     
-        # Constants
+        # local varaibles
         total = 0
         numberOfLines = 0
+        
+        # Read the first line from the file
+        line = numbers_file.readlines()
     
         # As long as an empty string is not returned from readline, continue processing
-        for line in numbers_file:
-            numberOfLines += 1              # the number of lines
+        for line in line:
             total += int(line)              # total of the numbers
-            line = numbers_file.readline()  # Read the next line
+            numberOfLines += 1              # the number of lines
+        
         average = total / numberOfLines     # Average of the numbers
 
         # Close the file
