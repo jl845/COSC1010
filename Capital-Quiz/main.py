@@ -66,7 +66,7 @@ def main():
     # Display the results
     print(f'\nFinal score:')
     print('Correct responses:', correct)
-    print('Incorrect responses, incorrect')             
+    print('Incorrect responses:', incorrect)             
 
 # Call the main function.
 main()
